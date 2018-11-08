@@ -2,32 +2,34 @@
 
 using namespace std;
 
+//Functions and calling functions
 
-/*Basically the Hello World example*/
-int main()
+
+// This is the protype for a function that is called BELOW (after) the int main
+void My_Test_Function_Prototype();
+
+
+void BTC_Price()
 {
-	cout << "The start of a new era! --- by Ray" << endl;
-	cout << "Second line here... after endl \n \n";
-
-	cout << "The start of a new era! --- by Ray \n";
-	cout << "Second line here starts with backslash n instead of endl";
-	
-	cin.get();
-	return 0;
-
+	cout << "Right now the BTC price is 6470.53 \n" << endl;
 }
 
 
-int SEcond()
+int main()
 {
+	
 
-	/* Integer, function example*/
-	int MyLuckyNumber = 3;
-	cout << MyLuckyNumber;
+	BTC_Price();
+	My_Test_Function_Prototype();
 
+
+
+	cin.get();
 	return 0;
+}
 
-
-
+void My_Test_Function_Prototype()
+{
+	cout << "This is the result of my function prototype which is first preproccessed on top but now running on the bottom \n" << endl;
 }
 
