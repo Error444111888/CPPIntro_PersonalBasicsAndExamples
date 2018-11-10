@@ -296,3 +296,48 @@ int main()
 
 ////////////////////////////////////////////
 
+// Private Classes and Objects
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Classes and Objects
+
+// When creating a class make sure to add public or private with a :
+class BTCBalanceTotal
+{
+	// For us to access the Private variable we have to setName and then getName
+public:
+	//Setting the name
+	void setName(string x)
+	{
+		BTC_Private = x;
+	}
+	//Getting the name
+	string getName()
+	{
+		return BTC_Private;
+	}
+
+private:
+	string BTC_Private;
+
+};
+
+
+int main()
+{
+
+	BTCBalanceTotal BTC_O;
+	BTC_O.setName("BTC is the first Crypto Currency");
+
+	cout << BTC_O.getName();
+
+	cin.get();
+	return 0;
+}
+
+
+////////////////////////////////////////////
+
