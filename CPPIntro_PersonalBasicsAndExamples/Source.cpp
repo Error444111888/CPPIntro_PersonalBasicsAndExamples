@@ -198,4 +198,101 @@ void My_Test_Function_Prototype()
 	cout << "This is the result of my function prototype which is first preproccessed on top but now running on the bottom \n" << endl;
 }
 
+//////////////////////////////////////////
+
+/*Single parameter function*/
+
+
+void BTC_Price(int x)
+{
+	cout << "BTC Price is" << x << endl;
+}
+
+
+
+int main()
+{
+	BTC_Price(6345);
+
+	cin.get();
+	return 0;
+}
+
+///////////////////////////////////////////////
+
+/*Multiple parameter function*/
+
+
+double BTC_Balances(double Rays_Balance, double Susans_Balance, double Claudias_Balance)
+{
+	double Total_Balance = Rays_Balance + Susans_Balance + Claudias_Balance;
+
+	return Total_Balance;
+}
+
+int main()
+{
+	cout << BTC_Balances(3.1, 4.1, 5.1);
+
+	cin.get();
+	return 0;
+}
+
+//////////////////////////////////////////////////
+
+#include <iostream>
+
+using namespace std;
+
+// Classes and Objects
+
+// When creating a class make sure to add public or private with a :
+class BTCBalanceTotal
+{
+public:
+	void BTC_Balances()
+	{
+		double RayBTC = 1.1;
+		double SusanBTC = 2.1;
+		double ClaudiaBTC = 3.1;
+
+		double Total_BTC = RayBTC + SusanBTC + ClaudiaBTC;
+
+		cout << Total_BTC << endl;
+	}
+
+};
+
+class LTCBalanceTotal
+{
+public:
+	void LTC_Balances()
+	{
+		double RayLTC = 100.1;
+		double SusanLTC = 200.1;
+		double ClaudiaLTC = 300.1;
+
+		double Total_LTC = RayLTC + SusanLTC + ClaudiaLTC;
+
+		cout << Total_LTC << endl;
+	}
+};
+
+int main()
+{
+	//Name your class an object first
+	BTCBalanceTotal BTCBalanceObject;
+	//Call your function in your class/object with a dot ( . ) between them. Dot is the separator here
+	BTCBalanceObject.BTC_Balances();
+
+	// Same thing for LTC
+	LTCBalanceTotal LTC_Balance_O;
+	LTC_Balance_O.LTC_Balances();
+
+	cin.get();
+	return 0;
+}
+
+
+////////////////////////////////////////////
 
